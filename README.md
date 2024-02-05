@@ -1,2 +1,2 @@
-# trafficTally
+# TrafficTally
 Traffic Tally App
