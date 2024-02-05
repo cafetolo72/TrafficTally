@@ -52,3 +52,5 @@ environments/
 firestore.indexes.json
 firestore.rules
 .editorconfig
+
+src/
