@@ -1,0 +1,104 @@
+<div class="divMain">
+
+
+  <div class="divTop">
+    <mat-form-field class="search-field" appearance="outline">
+      <mat-icon matPrefix fontSet="fa" fontIcon="fa-search" class="icons"></mat-icon>
+      <input id="searchInput" matInput placeholder="Buscar" (keyup)="applyFilter($event)">
+    </mat-form-field>
+    
+    <button mat-button id="downloadCsv" class="btnCSV" (click)="$event.stopPropagation(); downloadCSVByDB()">
+      <mat-icon fontSet="fa" fontIcon="fa-download" class="iconCSV"></mat-icon>
+      <mat-label *ngIf="!isMobil" class="lblCSV">Download CSV</mat-label>
+    </button>
+  </div>
+  
+  <mat-table [dataSource]="dataSource">
+  
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef class="headerID" > ID. </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="cellID"> {{(element.id + 1).toString().padStart(2, '0')}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef class="cellHeader cellName"
+        style="width: 10%;"> Nombre </mat-header-cell>
+      <mat-cell #cellName *matCellDef="let element" class="rowName" style="width: 10%;"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Street Column -->
+    <ng-container matColumnDef="streets">
+      <mat-header-cell *matHeaderCellDef class="cellHeader cellStreet" style="width: 15%;">
+        <div (click)="changeRow('streets')">Calles</div>
+      </mat-header-cell>
+
+      <mat-cell *matCellDef="let element" class="cell cellStreet" style="width: 15%">
+        <div class="highlighted-text" [innerHTML]="element.streets"></div>
+      </mat-cell>
+    </ng-container>    
+
+    <!-- Cars Column -->
+    <ng-container matColumnDef="carsCount">
+      <mat-header-cell *matHeaderCellDef class="cellHeader cellCars" style="width: 16%;">
+        <div (click)="changeRow('carsCount')">Coches</div>
+      </mat-header-cell>
+    
+      <mat-cell *matCellDef="let element" class="cell cellCars" style="width: 16%;"
+          [ngClass]="{'opened' : currentRow == 'carsCount'}">
+        <div [innerHTML]="element.carsCount"></div>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Vehicle Column -->
+    <ng-container matColumnDef="vehicleCount">
+        <mat-header-cell *matHeaderCellDef class="cellHeader cellCars" style="width: 16%;">
+          <div (click)="changeRow('vehicleCount')">Vehículos pesados</div>
+        </mat-header-cell>
+        
+        <mat-cell *matCellDef="let element" class="cell cellCars" style="width: 16%;">
+          <div [innerHTML]="element.vehicleCount"></div>
+        </mat-cell>
+    </ng-container>
+
+    <!-- City Column -->
+    <ng-container matColumnDef="city">
+      <mat-header-cell *matHeaderCellDef class="cellHeader cellCity" style="width: 12.5%;">
+        <div (click)="changeRow('city')">Ciudad</div>
+      </mat-header-cell>
+    
+      <mat-cell *matCellDef="let element" class="cell cellCity" style="width: 12.5%;">
+         {{element.city}}
+      </mat-cell>
+    </ng-container>
+
+    <!-- State Column -->
+    <ng-container matColumnDef="state">
+      <mat-header-cell *matHeaderCellDef class="cellHeader cellState" style="width: 15%;" >
+      <div (click)="changeRow('state')">Comunidad</div>
+      </mat-header-cell>
+
+      <mat-cell *matCellDef="let element" class="cell cellState" style="width: 15%;">
+      {{element.state}}</mat-cell>
+    </ng-container>
+  
+    <!-- Country Column -->
+    <ng-container matColumnDef="country">
+      <mat-header-cell *matHeaderCellDef class="cellHeader cellCountry" style="width: 10%;" >
+        <div (click)="changeRow('country')">País</div>
+      </mat-header-cell>
+
+      <mat-cell *matCellDef="let element" class="cell cellCountry" style="width: 10%;">
+        {{element.country}}
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns" class="header"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" class="row"></mat-row>
+  </mat-table>
+
+  <mat-paginator class="pag" [pageSizeOptions]="[5, 10, 20, 25, 50]" showFirstLastButtons
+    aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>

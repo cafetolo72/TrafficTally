@@ -1,0 +1,43 @@
+<mat-toolbar class="toolB">
+
+    <button mat-icon-button class="btnTitle" (click)="openSettingsMap()">
+    <mat-icon fontSet="fa" fontIcon="fa-map-o" class="icons"></mat-icon>
+    <mat-icon fontSet="fa" fontIcon="fa-gear" class="minIcon"></mat-icon>
+    </button>
+
+    <span class="labels title">Traffic Tally</span>
+
+    <span class="example-spacer"></span>
+
+    <mat-form-field class="search-field" [ngClass]="{ 'expanded': isExpanded }" appearance="outline">
+        <mat-icon matPrefix fontSet="fa" fontIcon="fa-search" class="icons" (click)="expandInput()"></mat-icon>
+        <input id="searchInput" matInput placeholder="Buscar" class="search-input" [(ngModel)]="searchText">
+    </mat-form-field>
+    
+    <button class="btnGear" mat-button [matMenuTriggerFor]="menu">
+        <mat-icon fontSet="fa" fontIcon="fa-gear" class="icons"></mat-icon>
+    </button>
+    
+    <mat-menu #menu="matMenu" hasBackdrop="true" style="z-index: 402;">
+        
+        <button mat-menu-item class="btnItems" (click)="$event.stopPropagation();showLogin()">
+            <mat-label>User</mat-label>
+            <mat-icon fontSet="fa" fontIcon="fa-user-o" class="icons"></mat-icon>
+         </button>
+
+        <button class="btnItems" mat-menu-item (click)="$event.stopPropagation();openDash()">
+            <mat-label>DashBoard</mat-label>
+            <mat-icon fontSet="fa" fontIcon="fa-chart-bar" class="icons"></mat-icon>
+        </button>
+        
+        <button class="btnItems" mat-menu-item (click)="$event.stopPropagation();toggleTheme()">
+            <mat-label>Theme</mat-label>
+            <mat-icon fontSet="fa" fontIcon="fa-lightbulb-o" class="icons" style="padding-left: 5px;"></mat-icon>
+        </button>
+    </mat-menu>
+</mat-toolbar>
+
+<app-login [isShowDialog]="isShowDialog"></app-login>
+<app-map [searchText]="searchText" [index]="index" [isShowSettings]="isShowSettingsMap" (reset)="resetIndex()" (clickMap)="clickMap($event)"></app-map>
+<app-dashboard *ngIf="isOpenDash" (closed)="isOpenDash = false"></app-dashboard>
+

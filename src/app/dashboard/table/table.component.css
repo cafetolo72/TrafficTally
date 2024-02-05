@@ -1,0 +1,211 @@
+table {
+    width: 100%;
+    min-height: 80% !important;
+    color: var(--color-text);
+  }
+
+.divMain{
+  width: 100%;
+  height: 100%;
+}
+
+.header{
+  padding-right: 10px !important;
+}
+
+.row{
+  padding-right: 10px !important;
+}
+
+.mat-mdc-table {
+  width: 100%;
+  max-width: 200px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.headerID{
+  margin-left: -7.5px;
+  padding-right: 5px;
+  color: var(--color-text);
+  white-space: pre-line;
+  width: 5%px;
+}
+
+.cellID{
+  color: var(--color-text) ;
+  white-space: pre-line;
+  padding-right: 10px;
+  padding-left: 2px !important;
+  border-right: 1px solid var(--secondary);
+}
+
+.cell{
+  white-space: pre-line;
+  color: var(--color-text);
+  justify-content: start;
+  border-right: 0.5px solid var(--secondary);
+}
+
+.cellHeader{
+  justify-content: start !important;
+  color: var(--color-text) ;
+  white-space: pre-line;
+}
+
+.cell:not(::selection){
+  color: var(--color-text);
+}
+
+.header{
+  display: flex;
+}
+
+.row{
+  width:100%;
+}
+
+.cellCars{
+  white-space: nowrap !important;
+}
+.rowName{
+  margin-left: 0 !important;
+  color: var(--color-text) !important;
+  white-space: pre-line;
+  justify-content: start;
+  border-right: 0.5px solid var(--secondary);
+}
+
+.pag{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: var(--color-text) ;
+  white-space: pre-line;
+  border-right: 0.5px solid var(--secondary);
+  padding-bottom: 5px;
+}
+
+.search-field {
+  width: 40%;
+  border-radius: 10px;
+  background-color: var(--background-color);
+  transition: width 0.3s ease;
+  color: var(--secondary);
+  margin-right: 10px;
+}
+
+#searchInput{
+  color: var(--color-text);
+  padding-top: 5px;
+}
+
+.iconCSV{
+  padding-top: 10px !important;
+  padding-right: 5px !important;
+}
+
+.highlighted-text {
+  white-space: pre-line;
+}
+
+.lblCSV{
+  padding-bottom: 10px !important;
+}
+
+.divTop{
+  display: flex;
+  justify-content: space-around;
+}
+
+.btnCSV{
+  width: auto !important;
+  padding: 5px !important;
+  border-radius: 10px;
+  background-color: var(--background-color) !important;
+  color: var(--color-text) !important;
+  border: 0.5px solid var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .search-field{
+    margin-top: 10px !important;
+    width: 80% !important;
+  }
+  .btnCSV{
+    width: auto !important;
+    margin-top: 10px !important;
+    margin-right: 20px !important;
+  }
+  .cell{
+    font-size: 10px !important;
+  }
+  .headerID{
+    font-size: 10px !important;
+  }
+  .header{
+    font-size: 10px !important;
+  }
+  .cellName{
+    width: 20% !important;
+    margin-left: -5px!important;
+  }
+  .cellCars{
+    width: 40% !important;
+  }
+  .cellID{
+    font-size: 10px !important;
+  }
+  .rowName{
+    width: 15% !important;
+    font-size: 10px !important;
+  }
+  .cellHeader{
+    font-size: 10px !important;
+  }
+  .cellStreet{
+    margin-left: -5px;
+    width: 25% !important;
+  }
+  .cellCity{
+    width: 25% !important;
+  }
+  .cellState{
+    width: 25% !important;
+  }
+  .cellCountry{
+    width: 25% !important;
+  }
+}
+
+@media (max-width: 1076px) {
+
+  .cell{
+    font-size: 12px !important;
+  }
+  .header{
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .cell{
+    font-size: 10px !important;
+  }
+  .header{
+    font-size: 12px !important;
+  }
+}
+
+@media (min-width: 1077px) {
+  .cell{
+    font-size: 14px !important;
+  }
+  .header{
+    font-size: 14px !important;
+  }
+  
+  .cellCars{
+    width: 18% !important;
+  }
+}

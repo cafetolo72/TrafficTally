@@ -1,0 +1,21 @@
+<div class="widget-container" *ngIf="isVisible" 
+[style.left.px]="left" [style.top.px]="top"
+[style.grid-template-columns]="'repeat('+columns+', 1fr)'" 
+[style.width]="width" [style.height]="height" 
+[ngClass]="{ 'max': isMax }">
+
+  <div class="events" (mousedown)="onMouseDown($event)" (touchstart)="onMouseDown($event)"
+                      (mousemove)="onMouseMove($event)" (touchmove)="onMouseMove($event)"
+                      (mouseup)="onMouseUp()" (touchend)="onMouseUp()" (click)="ale($event)">
+  </div>
+  <ng-content></ng-content>
+
+  <button class="btnMaxMin" *ngIf="!isMax && !isMobil" (click)="resize(true)">
+    <mat-icon fontSet="far" fontIcon="fa-square" class="icons" style="margin-left: 2.5px;"></mat-icon>
+  </button>
+  <button class="btnMaxMin" *ngIf="isMax && !isMobil" (click)="resize(false)">
+    <mat-icon fontSet="fa" fontIcon="fa-minus" class="icons" style="margin-left: 2.5px;"></mat-icon>
+  </button>
+  
+  <button class="btnCloseImg" (click)="toggleMenu()">X</button>
+</div>

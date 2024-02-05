@@ -1,0 +1,89 @@
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    cursor: pointaer;
+    transition: background-color 0.3s;
+}
+
+.btnCountSubstract{
+    background-color: white;
+    margin-left: 5px;
+    height: 60px;
+}
+
+.btnCountSubstractVehicle{
+    height: 50px;
+    background-color: #dfa598;
+    margin-left: 5px;
+}
+
+.btnCountAdd{
+    height: 60px;
+    background-color: white;
+    margin-right: 5px;
+}
+
+.btnCountAddVehicle{
+    height: 50px;
+    background-color: #dfa598;
+    margin-right: 5px;
+}
+
+.miniDiv{
+    height: 100px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+}
+
+.divStreet{
+    margin-top: 3px;
+    text-align: center;
+}
+
+.divElement{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divCount{
+    margin: 5px;
+    text-align: center;
+    width: 70px;
+}
+
+.pStreet{
+    border: none;
+    width: 100%;
+    background-color: inherit;
+    text-align: center;
+    font-size: 15px;
+    color: black; 
+    margin: 0 !important;
+    margin-top: 5px;
+}
+
+.pCounter{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+}
+
+.pCounterVehicle{
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 15px;
+    color: black;
+}
+  
+@media only screen and (max-width: 600px) {
+    #myButton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

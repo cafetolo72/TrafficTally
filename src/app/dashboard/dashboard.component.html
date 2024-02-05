@@ -1,0 +1,30 @@
+<app-widget-container [id]="'Widget Chart'" [width]="width" [height]="'20%'" (closed)="closed.emit()">
+
+  <div class="divMain">
+    
+    <div class="tabLeft">  
+      <button *ngFor="let btn of arr" class="menuBtn" [id]="btn.id" mat-menu-item (click)="$event.stopPropagation(); changeCenter(btn)">
+        <mat-label *ngIf="!isMobil">{{btn.name}}</mat-label>
+        <mat-icon fontSet="fa" [fontIcon]="btn.icon" class="icons"></mat-icon>
+      </button>
+    </div>
+    
+    <div class="center">
+      <ng-container *ngIf="dashCenter.type == 'table';">  
+        <app-table class="fillTop" style="flex: 50%;" [crosses]="crosses"></app-table>
+      </ng-container>
+      
+      <ng-container *ngIf="dashCenter.typeChart == 'bar';">  
+        <app-chart-base [id]="dashCenter.id" class="fillTop" [options]="data" width="100%" height="80%" [type]="dashCenter.typeChart"></app-chart-base>
+      </ng-container>
+      
+      <ng-container *ngIf="dashCenter.typeChart == 'line';">  
+        <app-chart-base [id]="dashCenter.id" class="fillTop" [options]="data" width="100%" height="80%" [type]="dashCenter.typeChart"></app-chart-base>
+      </ng-container>
+      
+      <ng-container *ngIf="dashCenter.typeChart == 'pie';">  
+        <app-chart-base [id]="dashCenter.id" class="fillTop" [options]="data" width="100%" height="80%" [type]="dashCenter.typeChart"></app-chart-base>
+      </ng-container>
+    </div>      
+  </div>
+</app-widget-container>
