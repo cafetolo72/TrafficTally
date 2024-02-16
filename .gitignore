@@ -54,3 +54,5 @@ firestore.rules
 .editorconfig
 
 src/
+
+*.json
