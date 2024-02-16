@@ -56,3 +56,4 @@ firestore.rules
 src/
 
 *.json
+.json

@@ -6,7 +6,6 @@
 <summary><b>Descripción</b></summary>
 
 <i>
-
     La Aplicación Traffic Tally es una herramienta esencial para el control y la optimización del tráfico vehicular en entornos urbanos y suburbanos. Diseñada para ofrecer funcionalidades avanzadas y una interfaz intuitiva, esta aplicación se presenta como la solución ideal para autoridades de tránsito, planificadores urbanos y cualquier entidad interesada en mejorar la movilidad urbana.
 </i>
 
