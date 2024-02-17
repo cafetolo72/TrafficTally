@@ -6,7 +6,7 @@
 <summary><b>Descripción</b></summary>
 
 <i>
-    La Aplicación Traffic Tally es una herramienta esencial para el control y la optimización del tráfico vehicular en entornos urbanos y suburbanos. Diseñada para ofrecer funcionalidades avanzadas y una interfaz intuitiva, esta aplicación se presenta como la solución ideal para autoridades de tránsito, planificadores urbanos y cualquier entidad interesada en mejorar la movilidad urbana.
+    Traffic Tally es una aplicación esencial para el control y la optimización del tráfico vehicular en entornos urbanos y suburbanos. Ofrece funcionalidades avanzadas y una interfaz intuitiva para autoridades de tránsito, planificadores urbanos y cualquier entidad interesada en mejorar la movilidad urbana.
 </i>
 
 </details>
@@ -36,11 +36,10 @@
     </i>
     </details>
 
-- <details>
+-   <details>
     <summary><b>Identificación de Puntos Críticos</b></summary>
-
     <i>
-        Utilizando algoritmos de análisis espacial, la aplicación identifica puntos críticos de congestión vehicular y zonas problemáticas que requieren atención prioritaria. Esta función facilita la identificación de áreas de mejora y permite la implementación de medidas correctivas de manera eficiente.
+        Traffic Tally utiliza algoritmos avanzados de análisis espacial para identificar puntos críticos de congestión vehicular y áreas problemáticas en el mapa. Estas zonas se visualizan mediante un mapa de calor que resalta las áreas más concurridas y congestionadas. Esta función proporciona una representación visual clara de los puntos críticos de tráfico, permitiendo a los usuarios identificar áreas de mejora y tomar medidas correctivas de manera eficiente.
     </i>
     </details>
 
